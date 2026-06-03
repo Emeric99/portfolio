@@ -8,7 +8,7 @@ const content: Record<Lang, { label: string; groups: { title: string; tags: stri
     label: "Technical Stack",
     groups: [
       { title: "Backend", tags: ["Java", "Jakarta EE", "Servlets", "REST API", "HikariCP"] },
-      { title: "Databases", tags: ["MariaDB", "Redis", "SQL", "T-SQL"] },
+      { title: "Databases", tags: ["MariaDB", "Redis", "SQL"] },
       { title: "DevOps & Tools", tags: ["Docker", "Tomcat", "Bash", "Git", "GitHub", "Linux"] },
       { title: "Frontend & Other", tags: ["HTML/CSS/JS", "Python", "AI Integration"] },
     ],
@@ -17,7 +17,7 @@ const content: Record<Lang, { label: string; groups: { title: string; tags: stri
     label: "Stack Technique",
     groups: [
       { title: "Backend", tags: ["Java", "Jakarta EE", "Servlets", "REST API", "HikariCP"] },
-      { title: "Bases de données", tags: ["MariaDB", "Redis", "SQL", "T-SQL"] },
+      { title: "Bases de données", tags: ["MariaDB", "Redis", "SQL"] },
       { title: "DevOps & Outils", tags: ["Docker", "Tomcat", "Bash", "Git", "GitHub", "Linux"] },
       { title: "Frontend & Autre", tags: ["HTML/CSS/JS", "Python", "Intégration IA"] },
     ],
@@ -26,7 +26,7 @@ const content: Record<Lang, { label: string; groups: { title: string; tags: stri
     label: "Technischer Stack",
     groups: [
       { title: "Backend", tags: ["Java", "Jakarta EE", "Servlets", "REST API", "HikariCP"] },
-      { title: "Datenbanken", tags: ["MariaDB", "Redis", "SQL", "T-SQL"] },
+      { title: "Datenbanken", tags: ["MariaDB", "Redis", "SQL"] },
       { title: "DevOps & Tools", tags: ["Docker", "Tomcat", "Bash", "Git", "GitHub", "Linux"] },
       { title: "Frontend & Sonstiges", tags: ["HTML/CSS/JS", "Python", "KI-Integration"] },
     ],

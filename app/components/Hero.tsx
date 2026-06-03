@@ -190,6 +190,10 @@ export default function Hero({ lang }: { lang: Lang }) {
       className="relative min-h-screen flex flex-col items-center justify-center pt-14 overflow-hidden"
     >
       <StarField />
+      {/* Lueur verte en bas */}
+      <div className="absolute bottom-0 left-0 right-0 h-64 pointer-events-none"
+        style={{ background: "radial-gradient(ellipse 70% 100% at 50% 100%, rgba(0,176,80,0.12) 0%, transparent 70%)" }}
+      />
 
       {/* Anime character */}
       <motion.div

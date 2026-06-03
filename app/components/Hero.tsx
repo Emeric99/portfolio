@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const content = {
   en: {
     tag: "Open to Werkstudent & Pflichtpraktikum",
@@ -17,6 +19,13 @@ export default function Hero({ lang }: { lang: "en" | "de" }) {
   const t = content[lang];
   return (
     <section className="min-h-screen flex flex-col justify-center px-8 max-w-3xl mx-auto pt-20">
+      <Image
+  src="/photo.jpg"
+  alt="Emeric Tcholagheu"
+  width={80}
+  height={80}
+  className="rounded-full mb-6 border-2 border-white/10"
+/>
       <div className="inline-flex items-center gap-2 bg-indigo-500/10 border border-indigo-500/25 text-indigo-400 text-xs px-3 py-1 rounded-full w-fit mb-6">
         <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
         {t.tag}

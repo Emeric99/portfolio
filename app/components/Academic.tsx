@@ -106,7 +106,7 @@ export default function Academic({ lang }: { lang: Lang }) {
                 <div className="relative flex-shrink-0 w-12 flex justify-center">
                   <div className="w-3 h-3 rounded-full bg-[#00b050] mt-5 z-10 ring-4 ring-[#00b050]/20" />
                 </div>
-                <div className="flex-1 bg-[#161b27] border border-white/8 rounded-2xl shadow-lg shadow-black/30 p-6 mb-2 hover:border-[#00b050]/30 transition-colors">
+                <div className="flex-1 bg-[var(--bg-card)] border border-white/8 rounded-2xl shadow-lg shadow-black/30 p-6 mb-2 hover:border-[#00b050]/30 transition-colors">
                   <div className="flex flex-wrap items-center gap-2 mb-3">
                     <span className="text-xs text-[#00d462] border border-[#00b050]/40 px-3 py-1 rounded-full">
                       {item.date}

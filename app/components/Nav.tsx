@@ -1,4 +1,5 @@
 "use client";
+import { useEffect, useState } from "react";
 
 type Lang = "en" | "fr" | "de";
 
@@ -12,8 +13,14 @@ const links: { label: Record<Lang, string>; href: string }[] = [
 ];
 
 export default function Nav({ lang, setLang }: { lang: Lang; setLang: (l: Lang) => void }) {
+  const [dark, setDark] = useState(true);
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("light", !dark);
+  }, [dark]);
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 h-14 px-8 flex items-center justify-between bg-[#0d1117]/90 backdrop-blur-md border-b border-white/5">
+    <nav className="fixed top-0 left-0 right-0 z-50 h-14 px-8 flex items-center justify-between bg-[var(--bg-main)]/90 backdrop-blur-md border-b border-white/5 transition-colors duration-300">
       <a href="#hero" className="font-[family-name:var(--font-bangers)] text-2xl text-[#00b050] tracking-wide italic">
         ET.
       </a>
@@ -26,7 +33,7 @@ export default function Nav({ lang, setLang }: { lang: Lang; setLang: (l: Lang) 
           </li>
         ))}
       </ul>
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-5">
         {(["en", "fr", "de"] as const).map((l) => (
           <button
             key={l}
@@ -40,6 +47,13 @@ export default function Nav({ lang, setLang }: { lang: Lang; setLang: (l: Lang) 
             {l.toUpperCase()}
           </button>
         ))}
+        <button
+          onClick={() => setDark(!dark)}
+          className="text-lg hover:scale-110 transition-transform"
+          title={dark ? "Light mode" : "Dark mode"}
+        >
+          {dark ? "☀️" : "🌙"}
+        </button>
       </div>
     </nav>
   );

@@ -54,7 +54,7 @@ export default function Projects({ lang }: { lang: Lang }) {
             <a
               href={p.link}
               target="_blank"
-              className="block bg-[#161b27] border border-white/8 rounded-2xl shadow-lg shadow-black/30 p-6 hover:border-[#00b050]/30 transition-colors h-full"
+              className="block bg-[var(--bg-card)] border border-white/8 rounded-2xl shadow-lg shadow-black/30 p-6 hover:border-[#00b050]/30 transition-colors h-full"
             >
               <div className="flex items-start gap-3 mb-4">
                 <svg className="w-5 h-5 text-zinc-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 24 24">

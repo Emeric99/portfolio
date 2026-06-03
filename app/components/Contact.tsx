@@ -85,7 +85,7 @@ export default function Contact({ lang }: { lang: Lang }) {
             <a
               href={link.href}
               target={link.href.startsWith("mailto") || link.href.startsWith("/") ? undefined : "_blank"}
-              className="flex items-center gap-4 bg-[#161b27] border border-[#00b050]/25 rounded-2xl p-5 hover:border-[#00b050]/60 transition-colors"
+              className="flex items-center gap-4 bg-[var(--bg-card)] border border-[#00b050]/25 rounded-2xl p-5 hover:border-[#00b050]/60 transition-colors"
             >
               <div className="w-10 h-10 rounded-full bg-[#00b050]/15 border border-[#00b050]/30 flex items-center justify-center flex-shrink-0 text-[#00b050]">
                 {link.icon}

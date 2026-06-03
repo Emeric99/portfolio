@@ -39,7 +39,7 @@ export default function Certificates({ lang }: { lang: Lang }) {
       <div className="grid sm:grid-cols-2 gap-4">
         {certs.map((cert, i) => (
           <FadeIn key={cert.title} delay={i * 0.08}>
-            <a href={cert.file} target="_blank" className="block bg-[#161b27] border border-white/8 rounded-2xl shadow-lg shadow-black/30 p-5 flex items-start gap-4 hover:border-[#00b050]/30 transition-colors">
+            <a href={cert.file} target="_blank" className="block bg-[var(--bg-card)] border border-white/8 rounded-2xl shadow-lg shadow-black/30 p-5 flex items-start gap-4 hover:border-[#00b050]/30 transition-colors">
               <div className="w-10 h-10 rounded-full bg-[#00b050]/15 border border-[#00b050]/30 flex items-center justify-center flex-shrink-0">
                 <span className="text-[#00b050] text-sm font-bold">✦</span>
               </div>

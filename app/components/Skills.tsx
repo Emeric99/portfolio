@@ -50,13 +50,13 @@ export default function Skills({ lang }: { lang: Lang }) {
       <div className="grid sm:grid-cols-2 gap-5">
         {t.groups.map((group, i) => (
           <FadeIn key={group.title} delay={i * 0.1}>
-            <div className="bg-[#161b27] border border-white/8 rounded-2xl shadow-lg shadow-black/30 p-6 hover:border-[#00b050]/30 transition-colors">
+            <div className="bg-[var(--bg-card)] border border-white/8 rounded-2xl shadow-lg shadow-black/30 p-6 hover:border-[#00b050]/30 transition-colors">
               <p className="text-[#00b050] text-xs font-semibold uppercase tracking-[0.15em] mb-4">{group.title}</p>
               <div className="flex flex-wrap gap-2">
                 {group.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="bg-[#0d1117] border border-white/10 text-zinc-300 text-xs px-3 py-1.5 rounded-lg font-mono"
+                    className="bg-[var(--bg-main)] border border-white/10 text-zinc-300 text-xs px-3 py-1.5 rounded-lg font-mono"
                   >
                     {tag}
                   </span>

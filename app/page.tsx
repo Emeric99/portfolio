@@ -13,7 +13,7 @@ export default function Home() {
   const [lang, setLang] = useState<"en" | "fr" | "de">("de");
 
   return (
-    <main className="min-h-screen bg-[#0d1117] text-white font-sans">
+    <main className="min-h-screen bg-[var(--bg-main)] text-white font-sans">
       <Nav lang={lang} setLang={setLang} />
       <Hero lang={lang} />
       <About lang={lang} />

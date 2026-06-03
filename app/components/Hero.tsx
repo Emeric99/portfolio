@@ -197,7 +197,7 @@ export default function Hero({ lang }: { lang: Lang }) {
           y: [0, -18, 0],
           filter: [
             "drop-shadow(0 0 6px rgba(0,176,80,0.2)) drop-shadow(0 0 12px rgba(0,176,80,0.1))",
-            "drop-shadow(0 0 15px rgba(0,212,98,0.55)) drop-shadow(0 0 30px rgba(0,176,80,0.3)) drop-shadow(0 0 50px rgba(0,176,80,0.12))",
+            "drop-shadow(0 0 10px rgba(0,212,98,0.3)) drop-shadow(0 0 20px rgba(0,176,80,0.15))",
             "drop-shadow(0 0 6px rgba(0,176,80,0.2)) drop-shadow(0 0 12px rgba(0,176,80,0.1))",
           ],
         }}

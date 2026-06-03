@@ -4,9 +4,6 @@
   --bg-main: #0d1117;
   --bg-card: #161b27;
   --bg-elevated: #1a1f2e;
-  --text-body: #f1f5f9;
-  --text-muted: #71717a;
-  --border-subtle: rgba(255, 255, 255, 0.08);
 }
 
 html {
@@ -15,23 +12,22 @@ html {
 
 body {
   background-color: var(--bg-main);
-  color: var(--text-body);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* ─── Light mode text overrides ─── */
-[data-theme="light"] .text-white          { color: #0f172a !important; }
-[data-theme="light"] .text-zinc-400       { color: #374151 !important; }
-[data-theme="light"] .text-zinc-500       { color: #4b5563 !important; }
-[data-theme="light"] .text-zinc-600       { color: #374151 !important; }
-[data-theme="light"] .text-zinc-300       { color: #1f2937 !important; }
-[data-theme="light"] .text-zinc-400.font-mono { color: #1e293b !important; }
-[data-theme="light"] .border-white\/8     { border-color: rgba(0,0,0,0.1) !important; }
-[data-theme="light"] .border-white\/5     { border-color: rgba(0,0,0,0.06) !important; }
-[data-theme="light"] .border-white\/10    { border-color: rgba(0,0,0,0.12) !important; }
-[data-theme="light"] nav a.text-zinc-400  { color: #374151 !important; }
-[data-theme="light"] nav a:hover          { color: #00b050 !important; }
-[data-theme="light"] .shadow-black\/30    { box-shadow: 0 4px 16px rgba(0,0,0,0.08) !important; }
+/* ─── Light mode : tout le texte blanc/zinc devient sombre ─── */
+[data-theme="light"] [class*="text-white"],
+[data-theme="light"] [class*="text-zinc-"] {
+  color: #1e293b !important;
+}
+
+[data-theme="light"] [class*="border-white\/"] {
+  border-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+[data-theme="light"] [class*="shadow-black\/"] {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06) !important;
+}
 
 ::selection {
   background: rgba(0, 176, 80, 0.3);

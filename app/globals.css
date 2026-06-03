@@ -1,18 +1,5 @@
 @import "tailwindcss";
 
-@theme {
-  /* Deku hair green — remplace tout le vert Tailwind */
-  --color-green-50:  #f0fdf4;
-  --color-green-100: #dcfce7;
-  --color-green-200: #bbf7d0;
-  --color-green-300: #4ade80;
-  --color-green-400: #00d462;
-  --color-green-500: #00b050;
-  --color-green-600: #008a3d;
-  --color-green-700: #00642b;
-  --color-green-800: #00431c;
-  --color-green-900: #00280f;
-}
 
 html {
   scroll-behavior: smooth;
@@ -26,7 +13,7 @@ body {
 }
 
 ::selection {
-  background: rgba(0, 176, 80, 0.3);
+  background: rgba(0, 176, 155, 0.695);
   color: #fff;
 }
 

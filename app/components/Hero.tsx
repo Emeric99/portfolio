@@ -27,7 +27,7 @@ const content: Record<Lang, {
   },
   de: {
     tag: "Java-Entwickler · Backend · DevOps",
-    subtitle: "Von Informatik zur Softwareentwicklung — robuste Systeme, die skalieren.",
+    subtitle: "Von Informatik zur Softwareentwicklung, robuste Systeme bauen, die skalieren.",
     scroll: "scrollen",
     github: "GitHub",
     linkedin: "LinkedIn",

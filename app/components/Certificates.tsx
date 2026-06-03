@@ -4,11 +4,11 @@ import FadeIn from "./FadeIn";
 type Lang = "en" | "fr" | "de";
 
 const certs = [
-  { title: "GitHub Foundations", issuer: "GitHub", date: "2024", category: "Git & GitHub" },
-  { title: "Introduction to Git", issuer: "GitHub", date: "2024", category: "Git & GitHub" },
-  { title: "Introduction to GitHub Concepts", issuer: "GitHub", date: "2024", category: "Git & GitHub" },
-  { title: "Intermediate Git", issuer: "GitHub", date: "2024", category: "Git & GitHub" },
-  { title: "Intermediate GitHub Concepts", issuer: "GitHub", date: "2024", category: "Git & GitHub" },
+  { title: "GitHub Foundations", issuer: "GitHub", date: "2024", category: "Git & GitHub", file: "/certificate_GitHub Foundations.pdf" },
+  { title: "Introduction to Git", issuer: "GitHub", date: "2024", category: "Git & GitHub", file: "/certificate_introduction_to_Git.pdf" },
+  { title: "Introduction to GitHub Concepts", issuer: "GitHub", date: "2024", category: "Git & GitHub", file: "/certificate_introduction_to_GitHub_Concepts.pdf" },
+  { title: "Intermediate Git", issuer: "GitHub", date: "2024", category: "Git & GitHub", file: "/certificate_intermediate_Git.pdf" },
+  { title: "Intermediate GitHub Concepts", issuer: "GitHub", date: "2024", category: "Git & GitHub", file: "/certificate_Intermediate GitHub_Concepts.pdf" },
 ];
 
 const labels: Record<Lang, { section: string; title: string }> = {
@@ -34,7 +34,7 @@ export default function Certificates({ lang }: { lang: Lang }) {
       <div className="grid sm:grid-cols-2 gap-4">
         {certs.map((cert, i) => (
           <FadeIn key={cert.title} delay={i * 0.08}>
-            <div className="bg-[#161b27] border border-white/8 rounded-2xl p-5 flex items-start gap-4 hover:border-[#00b050]/30 transition-colors">
+            <a href={cert.file} target="_blank" className="block bg-[#161b27] border border-white/8 rounded-2xl p-5 flex items-start gap-4 hover:border-[#00b050]/30 transition-colors">
               <div className="w-10 h-10 rounded-full bg-[#00b050]/15 border border-[#00b050]/30 flex items-center justify-center flex-shrink-0">
                 <span className="text-[#00b050] text-sm font-bold">✦</span>
               </div>
@@ -45,7 +45,7 @@ export default function Certificates({ lang }: { lang: Lang }) {
                   {cert.category}
                 </span>
               </div>
-            </div>
+            </a>
           </FadeIn>
         ))}
       </div>

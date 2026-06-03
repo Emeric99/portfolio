@@ -193,7 +193,14 @@ export default function Hero({ lang }: { lang: Lang }) {
 
       {/* Anime character */}
       <motion.div
-        animate={{ y: [0, -18, 0] }}
+        animate={{
+          y: [0, -18, 0],
+          filter: [
+            "drop-shadow(0 0 6px rgba(0,176,80,0.2)) drop-shadow(0 0 12px rgba(0,176,80,0.1))",
+            "drop-shadow(0 0 25px rgba(0,212,98,0.9)) drop-shadow(0 0 50px rgba(0,176,80,0.5)) drop-shadow(0 0 80px rgba(0,176,80,0.2))",
+            "drop-shadow(0 0 6px rgba(0,176,80,0.2)) drop-shadow(0 0 12px rgba(0,176,80,0.1))",
+          ],
+        }}
         transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
         className="absolute right-0 bottom-0 h-[90%] w-auto pointer-events-none select-none"
       >

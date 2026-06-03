@@ -31,18 +31,18 @@ export default function Skills({ lang }: { lang: "en" | "de" }) {
   return (
     <section id="skills" className="py-20 px-8 max-w-3xl mx-auto">
       <FadeIn>
-        <p className="text-xs font-semibold uppercase tracking-widest text-indigo-400 mb-2">{t.label}</p>
+        <p className="text-xs font-semibold uppercase tracking-widest text-emerald-400 mb-2">{t.label}</p>
         <h2 className="text-3xl font-bold tracking-tight mb-2">{t.title}</h2>
         <p className="text-zinc-400 mb-8">{t.desc}</p>
       </FadeIn>
       <div className="grid grid-cols-2 gap-4">
         {t.groups.map((group, i) => (
           <FadeIn key={group.title} delay={i * 0.1}>
-            <div className="bg-zinc-900 border border-white/[0.07] rounded-xl p-5 h-full">
-              <p className="text-xs font-semibold uppercase tracking-widest text-indigo-400 mb-3">{group.title}</p>
+            <div className="bg-zinc-900/60 border border-white/[0.07] hover:border-emerald-500/30 rounded-xl p-5 h-full transition-colors">
+              <p className="text-xs font-semibold uppercase tracking-widest text-emerald-400 mb-3">{group.title}</p>
               <div className="flex flex-wrap gap-2">
                 {group.tags.map((tag) => (
-                  <span key={tag} className="bg-zinc-800 border border-white/[0.07] text-zinc-300 text-xs px-3 py-1 rounded-md">
+                  <span key={tag} className="bg-zinc-800 border border-white/[0.07] text-zinc-300 text-xs px-3 py-1 rounded-md font-mono">
                     {tag}
                   </span>
                 ))}

@@ -29,7 +29,7 @@ export default function Contact({ lang }: { lang: "en" | "de" }) {
   return (
     <section id="contact" className="py-20 px-8 max-w-3xl mx-auto">
       <FadeIn>
-        <p className="text-xs font-semibold uppercase tracking-widest text-indigo-400 mb-2">{t.label}</p>
+        <p className="text-xs font-semibold uppercase tracking-widest text-emerald-400 mb-2">{t.label}</p>
         <h2 className="text-3xl font-bold tracking-tight mb-2">{t.title}</h2>
         <p className="text-zinc-400 mb-8 max-w-md">{t.desc}</p>
       </FadeIn>
@@ -37,8 +37,8 @@ export default function Contact({ lang }: { lang: "en" | "de" }) {
         {t.links.map((link, i) => (
           <FadeIn key={link.label} delay={i * 0.1}>
             <a href={link.href} target="_blank"
-              className="bg-zinc-900 border border-white/[0.07] hover:border-indigo-500/40 rounded-xl p-5 flex flex-col items-center gap-2 transition-colors text-center">
-              <span className="text-sm font-semibold">{link.label}</span>
+              className="bg-zinc-900/60 border border-white/[0.07] hover:border-emerald-500/30 rounded-xl p-5 flex flex-col items-center gap-2 transition-colors text-center">
+              <span className="text-sm font-semibold text-emerald-400">{link.label}</span>
               <span className="text-xs text-zinc-500">{link.value}</span>
             </a>
           </FadeIn>

@@ -47,25 +47,25 @@ export default function Projects({ lang }: { lang: "en" | "de" }) {
   return (
     <section id="projects" className="py-20 px-8 max-w-3xl mx-auto">
       <FadeIn>
-        <p className="text-xs font-semibold uppercase tracking-widest text-indigo-400 mb-2">{t.label}</p>
+        <p className="text-xs font-semibold uppercase tracking-widest text-emerald-400 mb-2">{t.label}</p>
         <h2 className="text-3xl font-bold tracking-tight mb-2">{t.title}</h2>
         <p className="text-zinc-400 mb-8">{t.desc}</p>
       </FadeIn>
       <div className="flex flex-col gap-4">
         {t.projects.map((project, i) => (
           <FadeIn key={project.title} delay={i * 0.15}>
-            <div className="bg-zinc-900 border border-white/[0.07] hover:border-indigo-500/40 rounded-xl p-6 transition-colors">
+            <div className="bg-zinc-900/60 border border-white/[0.07] hover:border-emerald-500/30 rounded-xl p-6 transition-colors">
               <div className="flex items-start justify-between mb-2">
                 <h3 className="text-base font-semibold">{project.title}</h3>
                 <a href={project.link} target="_blank"
-                  className="text-xs text-zinc-500 hover:text-indigo-400 border border-white/[0.07] hover:border-indigo-500/40 px-3 py-1 rounded-md transition-colors">
+                  className="text-xs text-zinc-500 hover:text-emerald-400 border border-white/[0.07] hover:border-emerald-500/30 px-3 py-1 rounded-md transition-colors">
                   GitHub ↗
                 </a>
               </div>
               <p className="text-sm text-zinc-400 leading-relaxed mb-4">{project.desc}</p>
               <div className="flex flex-wrap gap-2">
                 {project.tags.map((tag) => (
-                  <span key={tag} className="bg-indigo-500/10 text-indigo-400 text-xs font-medium px-2.5 py-1 rounded-md">
+                  <span key={tag} className="bg-emerald-500/10 text-emerald-400 text-xs font-medium font-mono px-2.5 py-1 rounded-md">
                     {tag}
                   </span>
                 ))}

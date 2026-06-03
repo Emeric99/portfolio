@@ -1,3 +1,6 @@
+"use client";
+import FadeIn from "./FadeIn";
+
 const content = {
   en: {
     label: "Background",
@@ -30,7 +33,7 @@ const content = {
       {
         title: "B.Sc. Informatik",
         place: "Hochschule Bremerhaven",
-        date: "Okt2023 – heute",
+        date: "Okt 2023 – heute",
         desc: "Schwerpunkt: Softwareentwicklung & Künstliche Intelligenz · 6. Semester",
       },
       {
@@ -53,21 +56,22 @@ export default function Education({ lang }: { lang: "en" | "de" }) {
   const t = content[lang];
   return (
     <section id="education" className="py-20 px-8 max-w-3xl mx-auto">
-      <p className="text-xs font-semibold uppercase tracking-widest text-indigo-400 mb-2">{t.label}</p>
-      <h2 className="text-3xl font-bold tracking-tight mb-8">{t.title}</h2>
+      <FadeIn>
+        <p className="text-xs font-semibold uppercase tracking-widest text-indigo-400 mb-2">{t.label}</p>
+        <h2 className="text-3xl font-bold tracking-tight mb-8">{t.title}</h2>
+      </FadeIn>
       <div className="flex flex-col gap-4">
-        {t.items.map((item) => (
-          <div
-            key={item.title}
-            className="bg-zinc-900 border-l-2 border-l-indigo-500 border border-white/[0.07] rounded-r-xl p-5"
-          >
-            <div className="flex items-start justify-between mb-1">
-              <h3 className="text-sm font-semibold">{item.title}</h3>
-              <span className="text-xs text-zinc-500">{item.date}</span>
+        {t.items.map((item, i) => (
+          <FadeIn key={item.title} delay={i * 0.15}>
+            <div className="bg-zinc-900 border-l-2 border-l-indigo-500 border border-white/[0.07] rounded-r-xl p-5">
+              <div className="flex items-start justify-between mb-1">
+                <h3 className="text-sm font-semibold">{item.title}</h3>
+                <span className="text-xs text-zinc-500">{item.date}</span>
+              </div>
+              <p className="text-xs text-emerald-400 mb-1">{item.place}</p>
+              <p className="text-xs text-zinc-400 leading-relaxed">{item.desc}</p>
             </div>
-            <p className="text-xs text-emerald-400 mb-1">{item.place}</p>
-            <p className="text-xs text-zinc-400 leading-relaxed">{item.desc}</p>
-          </div>
+          </FadeIn>
         ))}
       </div>
     </section>

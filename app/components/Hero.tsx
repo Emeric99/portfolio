@@ -35,6 +35,26 @@ const content: Record<Lang, {
   },
 };
 
+// Génère un éclair en zigzag entre deux points
+function makeBolt(x1: number, y1: number, x2: number, y2: number, segments: number): [number, number][] {
+  const points: [number, number][] = [[x1, y1]];
+  for (let i = 1; i < segments; i++) {
+    const t = i / segments;
+    const mx = x1 + (x2 - x1) * t + (Math.random() - 0.5) * 30;
+    const my = y1 + (y2 - y1) * t + (Math.random() - 0.5) * 30;
+    points.push([mx, my]);
+  }
+  points.push([x2, y2]);
+  return points;
+}
+
+type Bolt = {
+  points: [number, number][];
+  life: number;
+  maxLife: number;
+  width: number;
+};
+
 function StarField() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -47,6 +67,7 @@ function StarField() {
     canvas.width = canvas.offsetWidth;
     canvas.height = canvas.offsetHeight;
 
+    // Étoiles scintillantes
     const stars: { x: number; y: number; r: number; o: number; speed: number; phase: number }[] = [];
     for (let i = 0; i < 140; i++) {
       stars.push({
@@ -59,11 +80,42 @@ function StarField() {
       });
     }
 
+    // Éclairs actifs
+    const bolts: Bolt[] = [];
+
+    const spawnBolt = () => {
+      const x = Math.random() * canvas.width;
+      const y = Math.random() * canvas.height;
+      const angle = Math.random() * Math.PI * 2;
+      const len = 30 + Math.random() * 80;
+      const x2 = x + Math.cos(angle) * len;
+      const y2 = y + Math.sin(angle) * len;
+      const segments = 3 + Math.floor(Math.random() * 4);
+      bolts.push({
+        points: makeBolt(x, y, x2, y2, segments),
+        life: 0,
+        maxLife: 8 + Math.random() * 10,
+        width: 0.5 + Math.random() * 1.2,
+      });
+    };
+
     let frame: number;
     let t = 0;
+    let spawnTimer = 0;
+
     const draw = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       t += 1;
+      spawnTimer += 1;
+
+      // Spawn nouveaux éclairs régulièrement
+      if (spawnTimer > 4 + Math.random() * 6) {
+        const count = Math.floor(Math.random() * 3) + 1;
+        for (let i = 0; i < count; i++) spawnBolt();
+        spawnTimer = 0;
+      }
+
+      // Dessiner les étoiles
       stars.forEach((s) => {
         const opacity = s.o * (0.5 + 0.5 * Math.sin(t * s.speed + s.phase));
         ctx.beginPath();
@@ -71,6 +123,50 @@ function StarField() {
         ctx.fillStyle = `rgba(0, 176, 80, ${opacity})`;
         ctx.fill();
       });
+
+      // Dessiner les éclairs
+      for (let i = bolts.length - 1; i >= 0; i--) {
+        const bolt = bolts[i];
+        bolt.life += 1;
+        const progress = bolt.life / bolt.maxLife;
+        const opacity = progress < 0.3
+          ? progress / 0.3
+          : 1 - (progress - 0.3) / 0.7;
+
+        ctx.save();
+        ctx.shadowBlur = 8;
+        ctx.shadowColor = `rgba(0, 212, 98, ${opacity})`;
+        ctx.strokeStyle = `rgba(180, 255, 200, ${opacity * 0.9})`;
+        ctx.lineWidth = bolt.width;
+        ctx.lineCap = "round";
+        ctx.beginPath();
+        ctx.moveTo(bolt.points[0][0], bolt.points[0][1]);
+        for (let j = 1; j < bolt.points.length; j++) {
+          ctx.lineTo(bolt.points[j][0], bolt.points[j][1]);
+        }
+        ctx.stroke();
+
+        // Halo extérieur plus large
+        ctx.shadowBlur = 16;
+        ctx.strokeStyle = `rgba(0, 176, 80, ${opacity * 0.3})`;
+        ctx.lineWidth = bolt.width * 3;
+        ctx.stroke();
+        ctx.restore();
+
+        // Petite étincelle à l'extrémité
+        const tip = bolt.points[bolt.points.length - 1];
+        ctx.save();
+        ctx.shadowBlur = 10;
+        ctx.shadowColor = `rgba(0, 255, 120, ${opacity})`;
+        ctx.fillStyle = `rgba(200, 255, 220, ${opacity})`;
+        ctx.beginPath();
+        ctx.arc(tip[0], tip[1], 1.5, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
+
+        if (bolt.life >= bolt.maxLife) bolts.splice(i, 1);
+      }
+
       frame = requestAnimationFrame(draw);
     };
     draw();

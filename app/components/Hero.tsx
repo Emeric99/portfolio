@@ -47,22 +47,34 @@ function StarField() {
     canvas.width = canvas.offsetWidth;
     canvas.height = canvas.offsetHeight;
 
-    const stars: { x: number; y: number; r: number; o: number }[] = [];
-    for (let i = 0; i < 120; i++) {
+    const stars: { x: number; y: number; r: number; o: number; speed: number; phase: number }[] = [];
+    for (let i = 0; i < 140; i++) {
       stars.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         r: Math.random() * 1.5 + 0.3,
-        o: Math.random() * 0.6 + 0.2,
+        o: Math.random() * 0.5 + 0.2,
+        speed: Math.random() * 0.02 + 0.005,
+        phase: Math.random() * Math.PI * 2,
       });
     }
 
-    stars.forEach((s) => {
-      ctx.beginPath();
-      ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(0, 176, 80, ${s.o})`;
-      ctx.fill();
-    });
+    let frame: number;
+    let t = 0;
+    const draw = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      t += 1;
+      stars.forEach((s) => {
+        const opacity = s.o * (0.5 + 0.5 * Math.sin(t * s.speed + s.phase));
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(0, 176, 80, ${opacity})`;
+        ctx.fill();
+      });
+      frame = requestAnimationFrame(draw);
+    };
+    draw();
+    return () => cancelAnimationFrame(frame);
   }, []);
 
   return (
@@ -116,10 +128,10 @@ export default function Hero({ lang }: { lang: Lang }) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.15 }}
-          className="font-[family-name:var(--font-bangers)] text-[clamp(4rem,12vw,9rem)] leading-none tracking-wide uppercase mb-6"
+          className="font-[family-name:var(--font-bangers)] text-[clamp(3.5rem,10vw,8rem)] leading-none tracking-wide uppercase mb-6"
         >
-          <span className="text-white">EMERIC </span>
-          <span className="text-[#00b050]">TCHOLAGHEU</span>
+          <span className="text-white block">EMERIC</span>
+          <span className="text-[#00b050] block">TCHOLAGHEU</span>
         </motion.h1>
 
         {/* Subtitle */}

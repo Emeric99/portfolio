@@ -31,10 +31,10 @@ const content: Record<Lang, {
 export default function About({ lang }: { lang: Lang }) {
   const t = content[lang];
   return (
-    <section id="about" className="py-24 px-8 max-w-5xl mx-auto">
+    <section id="about" className="py-20 px-8 max-w-5xl mx-auto">
       <FadeIn>
         <div className="text-center mb-16">
-          <p className="text-[#00b050] text-sm font-semibold uppercase tracking-[0.2em] mb-4">{t.label}</p>
+          <p className="text-[#00d462] text-sm font-semibold uppercase tracking-[0.2em] mb-4">{t.label}</p>
           <h2 className="font-[family-name:var(--font-bangers)] text-6xl md:text-7xl text-white uppercase tracking-wide">
             {t.title}
           </h2>

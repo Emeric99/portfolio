@@ -67,10 +67,10 @@ const links = [
 export default function Contact({ lang }: { lang: Lang }) {
   const t = content[lang];
   return (
-    <section id="contact" className="py-24 px-8 max-w-4xl mx-auto">
+    <section id="contact" className="py-20 px-8 max-w-4xl mx-auto">
       <FadeIn>
         <div className="text-center mb-12">
-          <p className="text-[#00b050] text-sm font-semibold uppercase tracking-[0.2em] mb-4">{t.label}</p>
+          <p className="text-[#00d462] text-sm font-semibold uppercase tracking-[0.2em] mb-4">{t.label}</p>
           <h2 className="font-[family-name:var(--font-bangers)] text-6xl md:text-7xl text-white uppercase tracking-wide">
             {t.title}
           </h2>

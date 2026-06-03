@@ -1,10 +1,12 @@
 const content = {
   en: {
+    tag: "Open to Werkstudent & Pflichtpraktikum",
     subtitle: "Informatik student at Hochschule Bremerhaven, specializing in Software Development & Artificial Intelligence. Passionate about Java backend development and building reliable systems.",
     github: "GitHub",
     linkedin: "LinkedIn",
   },
   de: {
+    tag: "Offen für Werkstudent & Pflichtpraktikum",
     subtitle: "Informatik-Student an der Hochschule Bremerhaven mit Schwerpunkt Software Entwicklung & Künstliche Intelligenz. Leidenschaft für Java-Backend-Entwicklung und zuverlässige Systeme.",
     github: "GitHub",
     linkedin: "LinkedIn",

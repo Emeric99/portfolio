@@ -118,8 +118,11 @@ export default function Academic({ lang }: { lang: Lang }) {
                     )}
                   </div>
                   <h3 className="text-white text-lg font-semibold mb-2">{item.title}</h3>
-                  <p className="text-[#00d462] text-sm flex items-center gap-1 mb-3">
-                    <span>📍</span> {item.place}
+                  <p className="text-[#00d462] text-sm flex items-center gap-1.5 mb-3">
+                    <svg className="w-3.5 h-3.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                    </svg>
+                    {item.place}
                   </p>
                   <p className="text-zinc-400 text-sm leading-relaxed">{item.desc}</p>
                 </div>

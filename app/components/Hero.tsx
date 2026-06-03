@@ -109,7 +109,7 @@ function StarField() {
       spawnTimer += 1;
 
       // Spawn nouveaux éclairs régulièrement
-      if (spawnTimer > 40 + Math.random() * 40) {
+      if (spawnTimer > 70 + Math.random() * 50) {
         const count = Math.floor(Math.random() * 2) + 1;
         for (let i = 0; i < count; i++) spawnBolt();
         spawnTimer = 0;

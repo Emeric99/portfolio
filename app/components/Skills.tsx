@@ -1,48 +1,63 @@
 "use client";
 import FadeIn from "./FadeIn";
 
-const content = {
+type Lang = "en" | "fr" | "de";
+
+const content: Record<Lang, { label: string; groups: { title: string; tags: string[] }[] }> = {
   en: {
-    label: "Technical stack",
-    title: "Skills",
-    desc: "Technologies I work with on real projects.",
+    label: "Technical Stack",
     groups: [
       { title: "Backend", tags: ["Java", "Jakarta EE", "Servlets", "REST API", "HikariCP"] },
-      { title: "Databases", tags: ["MariaDB", "Redis", "SQL"] },
-      { title: "DevOps & Tools", tags: ["Docker", "Tomcat", "Bash", "Git", "GitHub"] },
+      { title: "Databases", tags: ["MariaDB", "Redis", "SQL", "T-SQL"] },
+      { title: "DevOps & Tools", tags: ["Docker", "Tomcat", "Bash", "Git", "GitHub", "Linux"] },
       { title: "Frontend & Other", tags: ["HTML/CSS/JS", "Python", "AI Integration"] },
+    ],
+  },
+  fr: {
+    label: "Stack Technique",
+    groups: [
+      { title: "Backend", tags: ["Java", "Jakarta EE", "Servlets", "REST API", "HikariCP"] },
+      { title: "Bases de données", tags: ["MariaDB", "Redis", "SQL", "T-SQL"] },
+      { title: "DevOps & Outils", tags: ["Docker", "Tomcat", "Bash", "Git", "GitHub", "Linux"] },
+      { title: "Frontend & Autre", tags: ["HTML/CSS/JS", "Python", "Intégration IA"] },
     ],
   },
   de: {
     label: "Technischer Stack",
-    title: "Kenntnisse",
-    desc: "Technologien, die ich in echten Projekten einsetze.",
     groups: [
       { title: "Backend", tags: ["Java", "Jakarta EE", "Servlets", "REST API", "HikariCP"] },
-      { title: "Datenbanken", tags: ["MariaDB", "Redis", "SQL"] },
-      { title: "DevOps & Tools", tags: ["Docker", "Tomcat", "Bash", "Git", "GitHub"] },
+      { title: "Datenbanken", tags: ["MariaDB", "Redis", "SQL", "T-SQL"] },
+      { title: "DevOps & Tools", tags: ["Docker", "Tomcat", "Bash", "Git", "GitHub", "Linux"] },
       { title: "Frontend & Sonstiges", tags: ["HTML/CSS/JS", "Python", "KI-Integration"] },
     ],
   },
 };
 
-export default function Skills({ lang }: { lang: "en" | "de" }) {
+export default function Skills({ lang }: { lang: Lang }) {
   const t = content[lang];
   return (
-    <section id="skills" className="py-20 px-8 max-w-3xl mx-auto">
+    <section id="skills" className="py-24 px-8 max-w-5xl mx-auto">
       <FadeIn>
-        <p className="text-xs font-semibold uppercase tracking-widest text-emerald-400 mb-2">{t.label}</p>
-        <h2 className="text-3xl font-bold tracking-tight mb-2">{t.title}</h2>
-        <p className="text-zinc-400 mb-8">{t.desc}</p>
+        <div className="text-center mb-16">
+          <p className="text-[#00b050] text-sm font-semibold uppercase tracking-[0.2em] mb-4">{t.label}</p>
+          <h2 className="font-[family-name:var(--font-bangers)] text-6xl md:text-7xl text-white uppercase tracking-wide">
+            Skills
+          </h2>
+          <div className="w-16 h-0.5 bg-[#00b050] mx-auto mt-4" />
+        </div>
       </FadeIn>
-      <div className="grid grid-cols-2 gap-4">
+
+      <div className="grid sm:grid-cols-2 gap-5">
         {t.groups.map((group, i) => (
           <FadeIn key={group.title} delay={i * 0.1}>
-            <div className="bg-zinc-900/60 border border-white/[0.07] hover:border-emerald-500/30 rounded-xl p-5 h-full transition-colors">
-              <p className="text-xs font-semibold uppercase tracking-widest text-emerald-400 mb-3">{group.title}</p>
+            <div className="bg-[#161b27] border border-white/8 rounded-2xl p-6 hover:border-[#00b050]/30 transition-colors">
+              <p className="text-[#00b050] text-xs font-semibold uppercase tracking-[0.15em] mb-4">{group.title}</p>
               <div className="flex flex-wrap gap-2">
                 {group.tags.map((tag) => (
-                  <span key={tag} className="bg-zinc-800 border border-white/[0.07] text-zinc-300 text-xs px-3 py-1 rounded-md font-mono">
+                  <span
+                    key={tag}
+                    className="bg-[#0d1117] border border-white/10 text-zinc-300 text-xs px-3 py-1.5 rounded-lg font-mono"
+                  >
                     {tag}
                   </span>
                 ))}

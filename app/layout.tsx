@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Bangers } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -12,7 +12,13 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
+const bangers = Bangers({
+  variable: "--font-bangers",
+  subsets: ["latin"],
+  weight: "400",
+});
+
+export const metadata: Metadata = {
   title: "Emeric Tcholagheu | Java Developer",
   description: "Informatik student at Hochschule Bremerhaven, specializing in Software Development & Artificial Intelligence.",
 };
@@ -25,9 +31,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${bangers.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[#030a06] text-zinc-100">{children}</body>
+      <body className="min-h-full flex flex-col bg-[#0d1117] text-zinc-100">{children}</body>
     </html>
   );
 }

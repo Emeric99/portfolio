@@ -37,7 +37,7 @@ export default function Nav({ lang, setLang }: { lang: Lang; setLang: (l: Lang) 
     const vars = isDark ? darkVars : lightVars;
     const root = document.documentElement;
     Object.entries(vars).forEach(([key, val]) => root.style.setProperty(key, val));
-    // Force text color on body
+    root.setAttribute("data-theme", isDark ? "dark" : "light");
     document.body.style.color = isDark ? "#f1f5f9" : "#0f172a";
     document.body.style.backgroundColor = isDark ? "#0d1117" : "#f0f4f8";
   };
@@ -67,7 +67,7 @@ export default function Nav({ lang, setLang }: { lang: Lang; setLang: (l: Lang) 
             onClick={() => setLang(l)}
             className={`text-sm font-semibold transition-colors ${
               lang === l
-                ? "text-white underline underline-offset-4 decoration-[#00b050]"
+                ? "text-[#00b050]"
                 : "text-zinc-500 hover:text-zinc-300"
             }`}
           >

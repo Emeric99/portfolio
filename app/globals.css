@@ -19,6 +19,20 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* ─── Light mode text overrides ─── */
+[data-theme="light"] .text-white          { color: #0f172a !important; }
+[data-theme="light"] .text-zinc-400       { color: #374151 !important; }
+[data-theme="light"] .text-zinc-500       { color: #4b5563 !important; }
+[data-theme="light"] .text-zinc-600       { color: #374151 !important; }
+[data-theme="light"] .text-zinc-300       { color: #1f2937 !important; }
+[data-theme="light"] .text-zinc-400.font-mono { color: #1e293b !important; }
+[data-theme="light"] .border-white\/8     { border-color: rgba(0,0,0,0.1) !important; }
+[data-theme="light"] .border-white\/5     { border-color: rgba(0,0,0,0.06) !important; }
+[data-theme="light"] .border-white\/10    { border-color: rgba(0,0,0,0.12) !important; }
+[data-theme="light"] nav a.text-zinc-400  { color: #374151 !important; }
+[data-theme="light"] nav a:hover          { color: #00b050 !important; }
+[data-theme="light"] .shadow-black\/30    { box-shadow: 0 4px 16px rgba(0,0,0,0.08) !important; }
+
 ::selection {
   background: rgba(0, 176, 80, 0.3);
   color: #fff;

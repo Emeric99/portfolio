@@ -23,8 +23,7 @@ export default function Home() {
       <Certificates lang={lang} />
       <Contact lang={lang} />
       <footer className="border-t border-white/5 text-center py-8 text-xs text-zinc-600">
-        <p>© 2025 Emeric Tcholagheu · Built with Next.js & Vercel</p>
-        <p className="mt-1 text-zinc-700">
+        <p className="text-zinc-700">
           {{ en: "Thank you for visiting", fr: "Merci de votre visite", de: "Danke für Ihren Besuch" }[lang]}
         </p>
       </footer>

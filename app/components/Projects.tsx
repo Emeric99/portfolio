@@ -26,6 +26,39 @@ const projects = [
     langColor: "#b07219",
     link: "https://github.com/Emeric99/wetterdienst",
   },
+  {
+    title: "Afroshop",
+    desc: {
+      en: "E-commerce frontend for an Asian & African products shop. Includes a product catalog, shopping cart, order history, user auth, and an interactive map via Leaflet.js. Connects to a Bash CGI backend.",
+      fr: "Frontend e-commerce pour une boutique de produits asiatiques et africains. Catalogue produits, panier, historique de commandes, authentification et carte interactive Leaflet.js.",
+      de: "E-Commerce-Frontend für einen Asia- & Afrika-Shop. Produktkatalog, Warenkorb, Bestellhistorie, Nutzer-Auth und interaktive Karte mit Leaflet.js.",
+    },
+    lang: "JavaScript",
+    langColor: "#f1e05a",
+    link: "https://github.com/Emeric99/Afroshop",
+  },
+  {
+    title: "AVR Morse System",
+    desc: {
+      en: "Bidirectional Morse code encoder/decoder for AVR microcontrollers. Receives text via UART, outputs Morse signals on a digital pin, and decodes incoming Morse back to ASCII. Built with avr-gcc and simavr.",
+      fr: "Encodeur/décodeur Morse bidirectionnel pour microcontrôleurs AVR. Réception de texte via UART, sortie Morse sur pin numérique et décodage en ASCII. Développé avec avr-gcc et simavr.",
+      de: "Bidirektionales Morse-Encoder/Decoder-System für AVR-Mikrocontroller. Textempfang via UART, Morse-Ausgabe auf digitalem Pin und Rückdecodierung zu ASCII. Gebaut mit avr-gcc und simavr.",
+    },
+    lang: "C",
+    langColor: "#555555",
+    link: "https://github.com/Emeric99/AVR-Morse-System",
+  },
+  {
+    title: "Portfolio",
+    desc: {
+      en: "Personal portfolio built with Next.js, TypeScript, and Tailwind CSS. Features multilingual support (EN/FR/DE), dark/light mode, Framer Motion animations, and is deployed on Vercel.",
+      fr: "Portfolio personnel développé avec Next.js, TypeScript et Tailwind CSS. Support multilingue (EN/FR/DE), mode sombre/clair, animations Framer Motion, déployé sur Vercel.",
+      de: "Persönliches Portfolio mit Next.js, TypeScript und Tailwind CSS. Mehrsprachig (EN/FR/DE), Dark/Light Mode, Framer-Motion-Animationen, deployed auf Vercel.",
+    },
+    lang: "TypeScript",
+    langColor: "#3178c6",
+    link: "https://github.com/Emeric99/portfolio",
+  },
 ];
 
 const labels: Record<Lang, { section: string; title: string }> = {

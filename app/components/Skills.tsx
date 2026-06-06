@@ -10,7 +10,8 @@ const content: Record<Lang, { label: string; groups: { title: string; tags: stri
       { title: "Backend", tags: ["Java", "Jakarta EE", "Servlets", "REST API", "HikariCP"] },
       { title: "Databases", tags: ["MariaDB", "Redis", "SQL"] },
       { title: "DevOps & Tools", tags: ["Docker", "Tomcat", "Bash", "Git", "GitHub", "Linux"] },
-      { title: "Frontend & Other", tags: ["HTML/CSS/JS", "Python", "AI Integration"] },
+      { title: "Frontend & Other", tags: ["HTML/CSS/JS", "JavaScript", "TypeScript", "Next.js", "Tailwind CSS", "Python", "AI Integration"] },
+      { title: "Embedded & Systems", tags: ["C", "AVR", "UART", "avr-gcc", "simavr"] },
     ],
   },
   fr: {
@@ -19,7 +20,8 @@ const content: Record<Lang, { label: string; groups: { title: string; tags: stri
       { title: "Backend", tags: ["Java", "Jakarta EE", "Servlets", "REST API", "HikariCP"] },
       { title: "Bases de données", tags: ["MariaDB", "Redis", "SQL"] },
       { title: "DevOps & Outils", tags: ["Docker", "Tomcat", "Bash", "Git", "GitHub", "Linux"] },
-      { title: "Frontend & Autre", tags: ["HTML/CSS/JS", "Python", "Intégration IA"] },
+      { title: "Frontend & Autre", tags: ["HTML/CSS/JS", "JavaScript", "TypeScript", "Next.js", "Tailwind CSS", "Python", "Intégration IA"] },
+      { title: "Embarqué & Systèmes", tags: ["C", "AVR", "UART", "avr-gcc", "simavr"] },
     ],
   },
   de: {
@@ -28,7 +30,8 @@ const content: Record<Lang, { label: string; groups: { title: string; tags: stri
       { title: "Backend", tags: ["Java", "Jakarta EE", "Servlets", "REST API", "HikariCP"] },
       { title: "Datenbanken", tags: ["MariaDB", "Redis", "SQL"] },
       { title: "DevOps & Tools", tags: ["Docker", "Tomcat", "Bash", "Git", "GitHub", "Linux"] },
-      { title: "Frontend & Sonstiges", tags: ["HTML/CSS/JS", "Python", "KI-Integration"] },
+      { title: "Frontend & Sonstiges", tags: ["HTML/CSS/JS", "JavaScript", "TypeScript", "Next.js", "Tailwind CSS", "Python", "KI-Integration"] },
+      { title: "Embedded & Systeme", tags: ["C", "AVR", "UART", "avr-gcc", "simavr"] },
     ],
   },
 };

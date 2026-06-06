@@ -12,19 +12,19 @@ const content: Record<Lang, {
     label: "Who I am",
     title: "About Me",
     desc: "6th semester Informatik student at Hochschule Bremerhaven, passionate about building robust Java backend systems, containerized infrastructure, and AI-integrated applications. I believe in writing clean, maintainable code that solves real problems.",
-    interests: ["Java Backend", "Docker & DevOps", "REST APIs", "AI Integration", "Databases", "Open Source", "Comics", "Zeichnen", "Football"],
+    interests: ["Java Backend", "Docker & DevOps", "REST APIs", "AI Integration", "Databases", "Open Source", "Anime", "Zeichnen", "Football"],
   },
   fr: {
     label: "Qui je suis",
     title: "À propos",
     desc: "Étudiant en 6e semestre d'Informatik à la Hochschule Bremerhaven, passionné par les systèmes backend Java robustes, l'infrastructure conteneurisée et les applications intégrant l'IA. Je crois en un code propre et maintenable qui résout de vrais problèmes.",
-    interests: ["Backend Java", "Docker & DevOps", "APIs REST", "Intégration IA", "Bases de données", "Open Source", "Comics", "Dessin", "Football"],
+    interests: ["Backend Java", "Docker & DevOps", "APIs REST", "Intégration IA", "Bases de données", "Open Source", "Anime", "Dessin", "Football"],
   },
   de: {
     label: "Wer ich bin",
     title: "Über mich",
     desc: "Informatik-Student im 6. Semester an der Hochschule Bremerhaven mit Leidenschaft für robuste Java-Backend-Systeme, containerisierte Infrastruktur und KI-integrierte Anwendungen. Ich schreibe sauberen, wartbaren Code, der echte Probleme löst.",
-    interests: ["Java Backend", "Docker & DevOps", "REST APIs", "KI-Integration", "Datenbanken", "Open Source", "Comics", "Zeichnen", "Fußball"],
+    interests: ["Java Backend", "Docker & DevOps", "REST APIs", "KI-Integration", "Datenbanken", "Open Source", "Anime", "Zeichnen", "Fußball"],
   },
 };
 

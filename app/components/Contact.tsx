@@ -3,6 +3,12 @@ import FadeIn from "./FadeIn";
 
 type Lang = "en" | "fr" | "de";
 
+const cvLabels: Record<Lang, { label: string; value: string }> = {
+  en: { label: "Resume", value: "Download Resume" },
+  fr: { label: "CV", value: "Télécharger le CV" },
+  de: { label: "Lebenslauf", value: "Lebenslauf herunterladen" },
+};
+
 const content: Record<Lang, { label: string; title: string; desc: string }> = {
   en: {
     label: "Get in touch",
@@ -52,20 +58,11 @@ const links = [
       </svg>
     ),
   },
-  {
-    label: "CV",
-    value: "Lebenslauf / CV / Resume",
-    href: "/Lebenslauf_Tcholagheu.pdf",
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
-      </svg>
-    ),
-  },
 ];
 
 export default function Contact({ lang }: { lang: Lang }) {
   const t = content[lang];
+  const cv = cvLabels[lang];
   return (
     <section id="contact" className="py-20 px-8 max-w-4xl mx-auto">
       <FadeIn>
@@ -97,6 +94,22 @@ export default function Contact({ lang }: { lang: Lang }) {
             </a>
           </FadeIn>
         ))}
+        <FadeIn delay={links.length * 0.1}>
+          <a
+            href="/Lebenslauf_Tcholagheu.pdf"
+            className="flex items-center gap-4 bg-[var(--bg-card)] border border-[#00b050]/25 rounded-2xl p-5 hover:border-[#00b050]/60 transition-colors"
+          >
+            <div className="w-10 h-10 rounded-full bg-[#00b050]/15 border border-[#00b050]/30 flex items-center justify-center flex-shrink-0 text-[#00b050]">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+              </svg>
+            </div>
+            <div>
+              <p className="text-white text-sm font-semibold">{cv.label}</p>
+              <p className="text-zinc-500 text-xs mt-0.5">{cv.value}</p>
+            </div>
+          </a>
+        </FadeIn>
       </div>
     </section>
   );

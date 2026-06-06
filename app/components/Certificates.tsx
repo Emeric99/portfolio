@@ -19,7 +19,7 @@ const certs = [
 const labels: Record<Lang, { section: string; title: string }> = {
   en: { section: "Achievements", title: "Certificates" },
   fr: { section: "Réalisations", title: "Certificats" },
-  de: { section: "Errungenschaften", title: "Zertifikate" },
+  de: { section: "Kontinuierliches Lernen", title: "Zertifikate" },
 };
 
 export default function Certificates({ lang }: { lang: Lang }) {

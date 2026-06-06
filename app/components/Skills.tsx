@@ -50,7 +50,7 @@ export default function Skills({ lang }: { lang: Lang }) {
         </div>
       </FadeIn>
 
-      <div className="grid sm:grid-cols-2 gap-5">
+      <div className="grid md:grid-cols-2 gap-5">
         {t.groups.map((group, i) => (
           <FadeIn key={group.title} delay={i * 0.1}>
             <div className="bg-[var(--bg-card)] border border-white/8 rounded-2xl shadow-lg shadow-black/30 p-6 hover:border-[#00b050]/30 transition-colors">

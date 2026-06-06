@@ -4,11 +4,11 @@ import FadeIn from "./FadeIn";
 type Lang = "en" | "fr" | "de";
 
 const certs = [
-  { title: "GitHub Foundations", issuer: "GitHub", date: "2024", category: "Git & GitHub", file: "/certificate_GitHub Foundations.pdf" },
-  { title: "Introduction to Git", issuer: "GitHub", date: "2024", category: "Git & GitHub", file: "/certificate_introduction_to_Git.pdf" },
-  { title: "Introduction to GitHub Concepts", issuer: "GitHub", date: "2024", category: "Git & GitHub", file: "/certificate_introduction_to_GitHub_Concepts.pdf" },
-  { title: "Intermediate Git", issuer: "GitHub", date: "2024", category: "Git & GitHub", file: "/certificate_intermediate_Git.pdf" },
-  { title: "Intermediate GitHub Concepts", issuer: "GitHub", date: "2024", category: "Git & GitHub", file: "/certificate_Intermediate GitHub_Concepts.pdf" },
+  { title: "GitHub Foundations", issuer: "DataCamp", date: "2025", category: "Git & GitHub", file: "/certificate_GitHub Foundations.pdf" },
+  { title: "Introduction to Git", issuer: "DataCamp", date: "2025", category: "Git & GitHub", file: "/certificate_introduction_to_Git.pdf" },
+  { title: "Introduction to GitHub Concepts", issuer: "DataCamp", date: "2025", category: "Git & GitHub", file: "/certificate_introduction_to_GitHub_Concepts.pdf" },
+  { title: "Intermediate Git", issuer: "DataCamp", date: "2025", category: "Git & GitHub", file: "/certificate_intermediate_Git.pdf" },
+  { title: "Intermediate GitHub Concepts", issuer: "DataCamp", date: "2025", category: "Git & GitHub", file: "/certificate_Intermediate GitHub_Concepts.pdf" },
   { title: "Grundlagen der Programmierung: Basiswissen", issuer: "LinkedIn Learning", date: "2024", category: "Programmierung", file: "https://www.linkedin.com/in/emeric-tcholagheu-6bb73b313/details/certifications/" },
   { title: "Java Grundkurs 1: Sprachkonzepte und Programmiergrundlagen", issuer: "LinkedIn Learning", date: "2024", category: "Java", file: "https://www.linkedin.com/in/emeric-tcholagheu-6bb73b313/details/certifications/" },
   { title: "Bash-Shell-Scripting für Fortgeschrittene: Variablen, Funktionen und Prozessmanagement", issuer: "LinkedIn Learning", date: "Jan. 2025", category: "Shell-Scripting", file: "https://www.linkedin.com/in/emeric-tcholagheu-6bb73b313/details/certifications/" },

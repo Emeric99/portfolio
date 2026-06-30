@@ -7,8 +7,8 @@ const content: Record<Lang, { label: string; groups: { title: string; tags: stri
   en: {
     label: "Technical Stack",
     groups: [
-      { title: "Backend", tags: ["Java", "Jakarta EE", "Servlets", "REST API", "HikariCP"] },
-      { title: "Databases", tags: ["MariaDB", "Redis", "SQL"] },
+      { title: "Backend", tags: ["Java", "Jakarta EE", "Spring Boot", "Servlets", "REST API", "HikariCP", "Spring Data JPA", "Hibernate", "Maven", "Lombok"] },
+      { title: "Databases", tags: ["MariaDB", "PostgreSQL", "H2", "Redis", "SQL"] },
       { title: "DevOps & Tools", tags: ["Docker", "Tomcat", "Bash", "Git", "GitHub", "Linux"] },
       { title: "Frontend & Other", tags: ["HTML/CSS/JS", "JavaScript", "TypeScript", "Next.js", "Tailwind CSS", "Python", "AI Integration"] },
       { title: "Embedded & Systems", tags: ["C", "AVR", "UART", "avr-gcc", "simavr"] },
@@ -17,8 +17,8 @@ const content: Record<Lang, { label: string; groups: { title: string; tags: stri
   fr: {
     label: "Stack Technique",
     groups: [
-      { title: "Backend", tags: ["Java", "Jakarta EE", "Servlets", "REST API", "HikariCP"] },
-      { title: "Bases de données", tags: ["MariaDB", "Redis", "SQL"] },
+      { title: "Backend", tags: ["Java", "Jakarta EE", "Spring Boot", "Servlets", "REST API", "HikariCP", "Spring Data JPA", "Hibernate", "Maven", "Lombok"] },
+      { title: "Bases de données", tags: ["MariaDB", "PostgreSQL", "H2", "Redis", "SQL"] },
       { title: "DevOps & Outils", tags: ["Docker", "Tomcat", "Bash", "Git", "GitHub", "Linux"] },
       { title: "Frontend & Autre", tags: ["HTML/CSS/JS", "JavaScript", "TypeScript", "Next.js", "Tailwind CSS", "Python", "Intégration IA"] },
       { title: "Embarqué & Systèmes", tags: ["C", "AVR", "UART", "avr-gcc", "simavr"] },
@@ -27,8 +27,8 @@ const content: Record<Lang, { label: string; groups: { title: string; tags: stri
   de: {
     label: "Technischer Stack",
     groups: [
-      { title: "Backend", tags: ["Java", "Jakarta EE", "Servlets", "REST API", "HikariCP"] },
-      { title: "Datenbanken", tags: ["MariaDB", "Redis", "SQL"] },
+      { title: "Backend", tags: ["Java", "Jakarta EE", "Spring Boot", "Servlets", "REST API", "HikariCP", "Spring Data JPA", "Hibernate", "Maven", "Lombok"] },
+      { title: "Datenbanken", tags: ["MariaDB", "PostgreSQL", "H2", "Redis", "SQL"] },
       { title: "DevOps & Tools", tags: ["Docker", "Tomcat", "Bash", "Git", "GitHub", "Linux"] },
       { title: "Frontend & Sonstiges", tags: ["HTML/CSS/JS", "JavaScript", "TypeScript", "Next.js", "Tailwind CSS", "Python", "KI-Integration"] },
       { title: "Embedded & Systeme", tags: ["C", "AVR", "UART", "avr-gcc", "simavr"] },

@@ -49,6 +49,17 @@ const projects = [
     link: "https://github.com/Emeric99/AVR-Morse-System",
   },
   {
+    title: "Task Manager API",
+    desc: {
+      en: "RESTful API built with Spring Boot for managing tasks. Features full CRUD operations, clean layered architecture (Controller, Service, Repository), Spring Data JPA with Hibernate, and an H2 in-memory database.",
+      fr: "API RESTful développée avec Spring Boot pour la gestion de tâches. CRUD complet, architecture en couches propre (Controller, Service, Repository), Spring Data JPA avec Hibernate et base H2 en mémoire.",
+      de: "RESTful-API mit Spring Boot zur Aufgabenverwaltung. Vollständiges CRUD, saubere Schichtenarchitektur (Controller, Service, Repository), Spring Data JPA mit Hibernate und H2-In-Memory-Datenbank.",
+    },
+    lang: "Java",
+    langColor: "#b07219",
+    link: "https://github.com/Emeric99/task-manager-api",
+  },
+  {
     title: "Portfolio",
     desc: {
       en: "Personal portfolio built with Next.js, TypeScript, and Tailwind CSS. Features multilingual support (EN/FR/DE), dark/light mode, Framer Motion animations, and is deployed on Vercel.",
